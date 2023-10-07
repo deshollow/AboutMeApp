@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		1A782CA42AD023EE0065EFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782CA32AD023EE0065EFFA /* AppDelegate.swift */; };
 		1A782CA62AD023EE0065EFFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782CA52AD023EE0065EFFA /* SceneDelegate.swift */; };
-		1A782CA82AD023EE0065EFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782CA72AD023EE0065EFFA /* ViewController.swift */; };
+		1A782CA82AD023EE0065EFFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782CA72AD023EE0065EFFA /* LoginViewController.swift */; };
 		1A782CAB2AD023EE0065EFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A782CA92AD023EE0065EFFA /* Main.storyboard */; };
 		1A782CAD2AD023F20065EFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A782CAC2AD023F20065EFFA /* Assets.xcassets */; };
 		1A782CB02AD023F20065EFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A782CAE2AD023F20065EFFA /* LaunchScreen.storyboard */; };
+		1A782CB82AD0287A0065EFFA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782CB72AD0287A0065EFFA /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A782CA02AD023EE0065EFFA /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A782CA32AD023EE0065EFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A782CA52AD023EE0065EFFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1A782CA72AD023EE0065EFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A782CA72AD023EE0065EFFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A782CAA2AD023EE0065EFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A782CAC2AD023F20065EFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A782CAF2AD023F20065EFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A782CB12AD023F20065EFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A782CB72AD0287A0065EFFA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				1A782CA32AD023EE0065EFFA /* AppDelegate.swift */,
 				1A782CA52AD023EE0065EFFA /* SceneDelegate.swift */,
-				1A782CA72AD023EE0065EFFA /* ViewController.swift */,
+				1A782CA72AD023EE0065EFFA /* LoginViewController.swift */,
 				1A782CA92AD023EE0065EFFA /* Main.storyboard */,
+				1A782CB72AD0287A0065EFFA /* WelcomeViewController.swift */,
 				1A782CAC2AD023F20065EFFA /* Assets.xcassets */,
 				1A782CAE2AD023F20065EFFA /* LaunchScreen.storyboard */,
 				1A782CB12AD023F20065EFFA /* Info.plist */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A782CA82AD023EE0065EFFA /* ViewController.swift in Sources */,
+				1A782CA82AD023EE0065EFFA /* LoginViewController.swift in Sources */,
+				1A782CB82AD0287A0065EFFA /* WelcomeViewController.swift in Sources */,
 				1A782CA42AD023EE0065EFFA /* AppDelegate.swift in Sources */,
 				1A782CA62AD023EE0065EFFA /* SceneDelegate.swift in Sources */,
 			);
@@ -302,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexeidemin.AboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexeidemin.AboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

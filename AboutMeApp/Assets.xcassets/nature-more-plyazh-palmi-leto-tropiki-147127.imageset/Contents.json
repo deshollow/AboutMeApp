@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "nature-more-plyazh-palmi-leto-tropiki-147127.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "nature-more-plyazh-palmi-leto-tropiki-147127@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "nature-more-plyazh-palmi-leto-tropiki-147127@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
