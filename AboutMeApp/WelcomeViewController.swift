@@ -11,15 +11,12 @@ final class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var greetingUser: UILabel!
     
-    var userName: String! //посредник (хранит значение с прошлого экрана)
+    var userMediator = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        greetingUser.text = "Welcome, \(userName ?? "unknown")!"
+        greetingUser.text = "Welcome, \(userMediator )!"
         
-    }
-    
-    @IBAction func logOutButtonPressed() {
     }
 }
