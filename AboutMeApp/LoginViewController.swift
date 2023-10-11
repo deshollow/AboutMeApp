@@ -13,12 +13,21 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let user = "User"
-    private let password = "Password"
+    private let user = User.getUser()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.userMediator = user
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        tabBarController.viewControllers?.forEach{ viewController in
+            if let firstVC = viewController as? WelcomeViewController {
+                firstVC.userMediator = user.login
+            } else if let navigationVC = viewController as? UINavigationController {
+                if let secondVC = navigationVC.topViewController as? ResumeViewController {
+                    secondVC.person = user
+                    secondVC.title = "\(user.person.name) \(user.person.surname)"
+                    secondVC.view.backgroundColor = .lightGray
+                }
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -27,7 +36,7 @@ final class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Wrong login or password",
                 message: "Please, check your login or password",
@@ -40,8 +49,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotPassOrLogin(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Forget your login?", message: "Your name is \(user)")
-        : showAlert(title: "Forget your password?", message: "Your password is \(password)")
+        ? showAlert(title: "Forget your login?", message: "Your name is \(user.login)")
+        : showAlert(title: "Forget your password?", message: "Your password is \(user.password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
