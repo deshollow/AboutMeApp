@@ -11,12 +11,12 @@ class BioViewController: UIViewController {
     
     @IBOutlet weak var textBioLabel: UILabel!
     
-    var person: User!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textBioLabel.text = person.person.description.info
+        textBioLabel.text = user.person.description.info
 
     }
     

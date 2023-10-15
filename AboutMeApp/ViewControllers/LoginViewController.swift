@@ -9,7 +9,6 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
@@ -19,12 +18,11 @@ final class LoginViewController: UIViewController {
         guard let tabBarController = segue.destination as? UITabBarController else {return}
         tabBarController.viewControllers?.forEach{ viewController in
             if let firstVC = viewController as? WelcomeViewController {
-                firstVC.userMediator = user.login
+                firstVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
                 if let secondVC = navigationVC.topViewController as? ResumeViewController {
-                    secondVC.person = user
+                    secondVC.user = user
                     secondVC.title = "\(user.person.name) \(user.person.surname)"
-                    secondVC.view.backgroundColor = .lightGray
                 }
             }
         }
