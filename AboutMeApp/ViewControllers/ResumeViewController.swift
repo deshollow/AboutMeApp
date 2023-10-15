@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResumeViewController: UIViewController {
+final class ResumeViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
     

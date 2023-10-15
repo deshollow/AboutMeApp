@@ -48,7 +48,8 @@ struct Description {
     static func getDescription() -> Description {
         Description(info: """
     Donda West:
-    ...that she wrote, "Speech to the Young: Speech to the Progress-Toward
+    ...that she wrote, "Speech to the Young:
+Speech to the Progress-Toward
     Say to them,
     say to the down-keepers,
     the sun-slappers,
